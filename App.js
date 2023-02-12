@@ -28,7 +28,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import codePush from "react-native-code-push";
 
-let codePushOptions = { 
+let codePushOptions = {
   checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
   installMode: codePush.InstallMode.ON_NEXT_RESUME,
   // mandatoryInstallMode: codePush.InstallMode.IMMEDIATE
@@ -36,51 +36,25 @@ let codePushOptions = {
 
 
 
-const Section = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
 const App = () => {
-useEffect(()=>{
-  codePush.getCurrentPackage()
-  .then((update) => {
-    console.log('update-=-=-',update)
-      // If the current app "session" represents the first time
-      // this update has run, and it had a description provided
-      // with it upon release, let's show it to the end user
+  useEffect(() => {
+    codePush.getCurrentPackage()
+      .then((update) => {
+        console.log('update-=-=-', update)
+        // If the current app "session" represents the first time
+        // this update has run, and it had a description provided
+        // with it upon release, let's show it to the end user
 
-  });
+      });
 
 
 
-},[])
+  }, [])
 
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: 'green',
+    // backgroundColor: 'green',
     flex: 1,
   };
 
@@ -91,11 +65,10 @@ useEffect(()=>{
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-        <Text>Hello guys</Text>
-        
+
         <Button
-        title='clicked'
-        onPress={()=>Alert.alert('', "new Version Of App")}
+          title='HEY Click Me'
+          onPress={() => Alert.alert('', 'Thanks for clicking me ≧◠‿◠≦✌')}
         />
       </ScrollView>
     </SafeAreaView>
