@@ -60,7 +60,8 @@ const LoginScreen = () => {
           <KeyboardAvoidingView enabled>
             <View style={{alignItems: 'center'}}>
               <Image
-                source={{uri: 'https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=740&t=st=1676219650~exp=1676220250~hmac=e87c20c8fe3ff36b8344a25b3534e8d6c1954da000c01ddc9fb08c1b851d8f18'}}
+                source={{uri: 'https://media.tenor.com/S5ehIpQf-dAAAAAM/well-keep-you-updated-jubal-valentine.gif'}}
+                  // 'https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=740&t=st=1676219650~exp=1676220250~hmac=e87c20c8fe3ff36b8344a25b3534e8d6c1954da000c01ddc9fb08c1b851d8f18'}}
                 style={{
                   width: '50%',
                   height: 150,
